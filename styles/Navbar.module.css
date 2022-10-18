@@ -1,0 +1,19 @@
+.rounded {
+    border-radius: 50px;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.smallFont {
+    font-size: 14px;
+}
+
+.thin {
+    font-weight: 200;
+}
+
+.homeRed {
+    background: #ff355d;
+}
