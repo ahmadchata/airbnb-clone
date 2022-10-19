@@ -1,0 +1,68 @@
+const listings = [
+  {
+    id: 1,
+    name: "5 Bedroom Duplex",
+    host: "Samuel Emeka",
+    date: "Jan 3 - 9",
+    price: "₦2,000",
+    rating: 4.99,
+  },
+  {
+    id: 2,
+    name: "2 Bedroom Lekki",
+    host: "Nkechi Chinasa",
+    date: "Mar 10 - 15",
+    price: "₦2,500",
+    rating: 3.59,
+  },
+  {
+    id: 3,
+    name: "Spacious shop Lugbe",
+    host: "Musa Musa",
+    date: "Dec 13 - 25",
+    price: "₦9,600",
+    rating: 2.75,
+  },
+  {
+    id: 4,
+    name: "2 Bedroom Lugbe",
+    host: "Aisha Adewale",
+    date: "Apr 25 - 30",
+    price: "₦10,000",
+    rating: 2.32,
+  },
+  {
+    id: 5,
+    name: "1 Bedroom River Park",
+    host: "Ahmad Isa",
+    date: "Sep 17 - 20",
+    price: "₦12,600",
+    rating: 4.15,
+  },
+  {
+    id: 6,
+    name: "2 story building",
+    host: "Joshua Martins",
+    date: "Nov 11 - 23",
+    price: "₦17,200",
+    rating: 4.98,
+  },
+  {
+    id: 7,
+    name: "Completed building",
+    host: "Yusuf Isa",
+    date: "Jul 24 - 26",
+    price: "₦2,700",
+    rating: 4.99,
+  },
+  {
+    id: 8,
+    name: "Office Space",
+    host: "Sadiq Konga",
+    date: "Aug 13 - 17",
+    price: "₦3,000",
+    rating: 1.25,
+  },
+];
+
+export default listings;

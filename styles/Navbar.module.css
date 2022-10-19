@@ -2,6 +2,10 @@
     border-radius: 50px;
 }
 
+.filterRounded {
+    border-radius: 10px;
+}
+
 .bold {
     font-weight: 600;
 }

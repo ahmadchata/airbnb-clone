@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "../styles/Navbar.module.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import filter from "../public/data/filters";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faGlobe,
   faSearch,
@@ -56,7 +56,7 @@ const PrevArrow = (props) => {
 };
 
 const NavBar = () => {
-  var settings = {
+  const settings = {
     dots: false,
     infinite: false,
     speed: 500,
@@ -66,7 +66,7 @@ const NavBar = () => {
     prevArrow: <PrevArrow />,
   };
   return (
-    <>
+    <div className="sticky-top bg-white shadow-sm">
       <nav
         className={`p-3 border d-flex justify-content-between align-items-center ${styles.smallFont}`}
       >
@@ -137,7 +137,7 @@ const NavBar = () => {
         <div
           className={`col ms-3 d-flex align-items-center justify-content-center`}
         >
-          <p className={`border py-2 px-2 ${styles.rounded}`}>
+          <p className={`border py-2 px-2 ${styles.filterRounded}`}>
             <FontAwesomeIcon
               className="me-1"
               color="#000"
@@ -149,7 +149,7 @@ const NavBar = () => {
           </p>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 export default NavBar;
