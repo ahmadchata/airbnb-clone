@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import Link from "next/link";
 import Image from "next/image";
 import styles from "../styles/Navbar.module.css";
 import filter from "../public/data/filters";
@@ -138,15 +139,19 @@ const NavBar = () => {
         <div className="pt-1 ps-5 col-11">
           <Slider {...settings}>
             {filter.map((icon) => (
-              <div key={icon.id} className="text-center pt-3">
-                <FontAwesomeIcon
-                  color="#848081"
-                  size="xl"
-                  icon={icon.icon}
-                  alt="Icon"
-                />
-                <p className={`mt-2 ${styles.tinyFont}`}>{icon.name}</p>
-              </div>
+              <Link href="#" key={icon.id}>
+                <a className="text-decoration-none text-muted">
+                  <div className="text-center pt-3">
+                    <FontAwesomeIcon
+                      color="#848081"
+                      size="xl"
+                      icon={icon.icon}
+                      alt="Icon"
+                    />
+                    <p className={`mt-2 ${styles.tinyFont}`}>{icon.name}</p>
+                  </div>
+                </a>
+              </Link>
             ))}
           </Slider>
         </div>

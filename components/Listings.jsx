@@ -2,16 +2,22 @@ import Image from "next/image";
 import house from "../public/listings/house.jpg";
 import styles from "../styles/Listings.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { faHeart, faStar } from "@fortawesome/free-solid-svg-icons";
 import listings from "../public/data/listings";
 
 const Listings = () => {
+  // Liking of listings
+  const likeListing = (e) => {
+    const id = document.getElementById(e);
+    id.classList.toggle(styles.red);
+  };
+
   return (
     <div className="row mx-0 mt-1 gy-3 px-3">
       {listings.map((listing) => (
         <div key={listing.id} className="col-3">
           <div>
-            <div>
+            <div className="position-relative">
               <Image
                 className={`${styles.imageListings}`}
                 src={house}
@@ -19,6 +25,15 @@ const Listings = () => {
                 height={320}
                 alt="Image of a house"
               />
+              <div
+                id={listing.id}
+                onClick={() => {
+                  likeListing(listing.id);
+                }}
+                className={styles.like}
+              >
+                <FontAwesomeIcon size="lg" icon={faHeart} alt="Heart icon" />
+              </div>
             </div>
             <div className="row mx-0">
               <div className="col-8">

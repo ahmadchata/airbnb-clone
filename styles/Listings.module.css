@@ -5,3 +5,15 @@
 .smallFont {
     font-size: 14.5px;
 }
+
+.like {
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: "#6a635e";
+}
+
+.red {
+    color: red;
+}
