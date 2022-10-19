@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Image from "next/image";
 import styles from "../styles/Navbar.module.css";
 import filter from "../public/data/filters";
@@ -12,6 +13,12 @@ import {
 import Slider from "react-slick";
 
 const NextArrow = (props) => {
+  useEffect(() => {
+    window.onscroll = () => {
+      scroll();
+    };
+  }, []);
+
   const { className, style, onClick } = props;
   return (
     <div
@@ -55,6 +62,15 @@ const PrevArrow = (props) => {
   );
 };
 
+// Adds shadow to navbar after scrolling
+const scroll = () => {
+  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+    document.querySelector(".sticky-top").classList.add("shadow-sm");
+  } else {
+    document.querySelector(".sticky-top").classList.remove("shadow-sm");
+  }
+};
+
 const NavBar = () => {
   const settings = {
     dots: false,
@@ -66,7 +82,7 @@ const NavBar = () => {
     prevArrow: <PrevArrow />,
   };
   return (
-    <div className="sticky-top bg-white shadow-sm">
+    <div className="sticky-top bg-white">
       <nav
         className={`p-3 border d-flex justify-content-between align-items-center ${styles.smallFont}`}
       >

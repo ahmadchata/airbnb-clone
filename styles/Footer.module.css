@@ -1,0 +1,18 @@
+.smallFont {
+    font-size: 14px;
+}
+
+.mapButton {
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 30px;
+    width: 130px;
+    height: 50px;
+    background: #000;
+    margin: 0 auto 30px auto;
+    transition: 0.3s ease-in-out;
+}
+
+.mapButton:hover {
+    transform: scale(1.05);
+}

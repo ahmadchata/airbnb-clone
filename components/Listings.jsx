@@ -22,11 +22,16 @@ const Listings = () => {
             </div>
             <div className="row mx-0">
               <div className="col-8">
-                <p className={`fw-bold my-0`}>{listing.name}</p>
+                <p className={`fw-bold my-0 ${styles.smallFont}`}>
+                  {listing.name}
+                </p>
                 <p className={`fw-light my-0 text-muted`}>{listing.host}</p>
                 <p className={`mb-0 fw-light text-muted`}>{listing.date}</p>
                 <p className={`mt-1 fw-light`}>
-                  <span className="fw-bold">{listing.price}</span> night
+                  <span className={`${styles.smallFont} fw-bold`}>
+                    {listing.price}
+                  </span>{" "}
+                  night
                 </p>
               </div>
               <div className="col text-end">
