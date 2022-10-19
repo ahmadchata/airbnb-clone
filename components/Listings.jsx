@@ -21,8 +21,7 @@ const Listings = () => {
               <Image
                 className={`${styles.imageListings}`}
                 src={house}
-                width={335}
-                height={320}
+                layout="intrinsic"
                 alt="Image of a house"
               />
               <div

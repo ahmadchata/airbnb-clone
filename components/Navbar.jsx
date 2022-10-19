@@ -135,7 +135,7 @@ const NavBar = () => {
           </span>
         </div>
       </nav>
-      <div className="row mx-0 pe-1">
+      <div className="row mx-0">
         <div className="pt-1 ps-5 col-11">
           <Slider {...settings}>
             {filter.map((icon) => (
