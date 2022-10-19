@@ -10,6 +10,10 @@
     font-size: 14px;
 }
 
+.tinyFont {
+    font-size: 10px;
+}
+
 .thin {
     font-weight: 200;
 }
